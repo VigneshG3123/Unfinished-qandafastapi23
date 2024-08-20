@@ -24,9 +24,9 @@ def get_db() -> Generator[Session, None, None]:
         db.close()
 
 
-@app.post("/api/questions")
+@app.post("create_questions")
 def create_question(question: QuestionCreate):
-    return {"question": question}
+    return {"question": question} #save it to database, call crud question and pass question create. create variable on main.py
 
 
 
